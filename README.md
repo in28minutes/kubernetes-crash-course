@@ -26,7 +26,7 @@ Look No Further!
 #### Required Tools
 
 - Java 8+
-- Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
+- Eclipse - Recent Version - (Embedded Maven From Eclipse)
 - Git
 - Docker
 - Kubernetes
@@ -36,15 +36,8 @@ Look No Further!
 #### Installing Guides
 
 - [Playlist - Installing Java, Eclipse & Embedded Maven](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
-- [Playlist - Installing Node Js (npm) & Visual Studio Code](https://www.youtube.com/playlist?list=PLBBog2r6uMCQN4X3Aa_jM9qVjgMCHMWx6)
 
 #### Troubleshooting Installations
-- Node JS and NPM 
-  - https://docs.npmjs.com/common-errors
-  - https://docs.npmjs.com/getting-started/troubleshooting
-- Visual Studio Code
-  - https://code.visualstudio.com/docs/supporting/errors
-  - https://code.visualstudio.com/docs/supporting/FAQ
 - Eclipse and Embedded Maven
   - Troubleshooting Guide : https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#tip--troubleshooting-embedded-maven-in-eclipse
   - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
