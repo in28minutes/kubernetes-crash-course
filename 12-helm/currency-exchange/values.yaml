@@ -1,0 +1,5 @@
+image: in28min/currency-exchange:0.0.1-RELEASE
+port: 8000
+servicetype: LoadBalancer
+replicas: 1
+name: currency-exchange

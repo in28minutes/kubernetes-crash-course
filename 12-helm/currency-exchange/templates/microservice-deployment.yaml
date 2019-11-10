@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name}}
+  labels:
+    app: {{ .Values.name}}
+spec:
+  replicas: {{ .Values.replicas}}
+  selector:
+    matchLabels:
+      app: {{ .Values.name}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name}}
+    spec:
+      containers:
+      - name: {{ .Values.name}}
+        image: {{ .Values.image}}
+        env:
+        - name: CURRENCY_EXCHANGE_URI
+          value: http://currency-exchange:8000
+        ports:
+        - containerPort: {{ .Values.port}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name}}
+  labels:
+    app: {{ .Values.name}}
+spec:
+  type: {{ .Values.servicetype}}
+  ports:
+  - port: {{ .Values.port}}
+    protocol: TCP
+  selector:
+    app: {{ .Values.name}}

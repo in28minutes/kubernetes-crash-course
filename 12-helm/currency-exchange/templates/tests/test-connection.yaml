@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "helloworld-ravi.fullname" . }}-test-connection"
+  labels:
+{{ include "helloworld-ravi.labels" . | indent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "helloworld-ravi.fullname" . }}:{{ .Values.port }}']
+  restartPolicy: Never

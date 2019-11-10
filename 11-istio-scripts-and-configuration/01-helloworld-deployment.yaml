@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-world-rest-api
+  name: hello-world-rest-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-rest-api
+  template:
+    metadata:
+      labels:
+        app: hello-world-rest-api
+    spec:
+      containers:
+      - image: in28min/hello-world-rest-api:0.0.1.RELEASE
+        imagePullPolicy: IfNotPresent
+        name: hello-world-rest-api
+        ports:
+        - name: liveness-port
+          containerPort: 8080
+          hostPort: 8080
+        resources:
+          requests:
+            cpu: 200m
+            memory: 512Mi
+          limits:
+            cpu: 400m
+            memory: 1024Mi #256Mi 
+        readinessProbe:
+          httpGet:
+            path: /
+            port: liveness-port
+          failureThreshold: 1
+          periodSeconds: 10
+          initialDelaySeconds: 30
+        livenessProbe:
+          httpGet:
+            path: /
+            port: liveness-port
+          failureThreshold: 3
+          periodSeconds: 10
+          initialDelaySeconds: 30
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hello-world-rest-api
+  name: hello-world-rest-api
+  namespace: default
+spec:
+  #type: LoadBalancer
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: hello-world-rest-api

@@ -1,0 +1,34 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: helloworld-virtual-services
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - http-gateway                      # 1
+  http:
+    - match:
+        - uri:
+            exact: /hello-world
+      route:
+        - destination:
+            host: hello-world-rest-api
+            port:
+              number: 8080
+    - match:
+        - uri:
+            prefix: /currency-exchange
+      route:
+        - destination:
+            host: currency-exchange
+            port:
+              number: 8000
+    - match:
+        - uri:
+            prefix: /currency-conversion
+      route:
+        - destination:
+            host: currency-conversion
+            port:
+              number: 8100
