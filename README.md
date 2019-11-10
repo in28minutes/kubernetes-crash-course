@@ -20,17 +20,11 @@ Look No Further!
 - [Video - Spring in Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
 - [Video - Spring Boot in Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
 - [Video - JPA/Hibernate in Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
-- [Video - React in Steps](https://www.youtube.com/watch?v=SWXuXhZkNQc&t=110s)
-- [Article - Getting started with React and Spring Boot - Full Stack](https://www.springboottutorial.com/spring-boot-react-full-stack-crud-maven-application)
-- [Article - Using Spring Security and JWT with React and Spring Boot](https://www.springboottutorial.com/spring-boot-react-full-stack-with-spring-security-basic-and-jwt-authentication)
-- [Azure Code Pipeline Github Repo](https://github.com/in28minutes/hello-world-rest-api-azure-pipelines)
 
 ## Installation Guides
 
 #### Required Tools
 
-- Node v8+ for npm
-- Visual Studio Code - Latest Version
 - Java 8+
 - Eclipse - Oxygen+ - (Embedded Maven From Eclipse)
 - Git
@@ -169,9 +163,9 @@ Block3 -- Level1 [style=invis]
 
 Level1[label=<Docker>]
 Block1[label=<Standaridized <BR/> Application Packaging <BR/><BR/><BR/> <FONT POINT-SIZE="10">Same packaging for <BR/>all types of applications</FONT>>]
-Block2[label=<Features <BR/><BR/> <FONT POINT-SIZE="10">Language Neutral<BR/> Minimum Overhead <BR/> Provides Isolation <BR/>  Enables Standardization </FONT> 
+Block2[label=<Features <BR/> <FONT POINT-SIZE="10">Language Neutral<BR/>  Cloud Neutral <BR/> Enables Standardization </FONT> 
 >]
-Block3[label=<Cloud Neutral <BR/><BR/><BR/><BR/><FONT POINT-SIZE="10">Standardized Platform <BR/> on any infrastructure</FONT>>]
+Block3[label=<Challenges <BR/><BR/><FONT POINT-SIZE="10"> 1000 Microservices<BR/> 1000 Instances</FONT>>]
 
 }
 
