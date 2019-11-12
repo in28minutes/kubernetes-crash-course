@@ -1,6 +1,6 @@
-# Kubernetes Crash Course with Spring Boot and Google Cloud
+# Kubernetes Crash Course for Java Developers on Google Cloud
 
-## Learn Kubernetes using Java, Spring Boot and Google Kubernetes Engine
+## Learn Kubernetes and Docker with Google Kubernetes Engine deploying Spring Boot Microservices
 
 Learn Kubernetes? Yes.   Learn Docker, Istio and Helm? Yes.
 Deploy Spring Boot and Spring Cloud Microservices to Kubernetes? Yes. Of Course.
