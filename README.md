@@ -1,32 +1,38 @@
 # Kubernetes Crash Course with Spring Boot and Google Cloud
 
-
 ## Learn Kubernetes using Java, Spring Boot and Google Kubernetes Engine
 
-Learn Kubernetes Fundamentals? Yes.   Create Clusters for Microservices? Yes.     Create Clusters for Full Stack Applications? Yes. Of Course. Hands-on? Of course.
+Learn Kubernetes? Yes.   Learn Docker, Istio and Helm? Yes.
+Deploy Spring Boot and Spring Cloud Microservices to Kubernetes? Yes. Of Course.
 
-Do you have ZERO experience with Kubernetes? No Problem.
+Do you have ZERO experience with Docker and Kubernetes? No Problem.
 
-Do you want to learn to create Clusters for Java Spring Boot Applications and Microservices using Kubernetes with an easy to learn, step by step approach?
-
-Are you ready to learn about Kubernetes and take the next step in your programming career?
+Do you want to learn Kubernetes and deploy Spring Boot Microservices to Kubernetes with an easy to learn, step by step approach?
 
 Do you want to join 300,000+ learners having Amazing Learning Experiences with in28Minutes?
 
 Look No Further!
 
+## First Commands
+
+```
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+```
+
 ## Getting Started
 - [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
-- [Video - Spring in Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
-- [Video - Spring Boot in Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
-- [Video - JPA/Hibernate in Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
+- [Video - Spring in 10 Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
+- [Video - Spring Boot in 10 Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
+- [Video - JPA/Hibernate in 10 Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
 
 ## Installation Guides
 
 #### Required Tools
 
 - Java 8+
-- Eclipse - Recent Version - (Embedded Maven From Eclipse)
+- Eclipse - Recent Version 
+- Maven
 - Git
 - Docker
 - Kubernetes
@@ -38,6 +44,7 @@ Look No Further!
 - [Playlist - Installing Java, Eclipse & Embedded Maven](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
 
 #### Troubleshooting Installations
+
 - Eclipse and Embedded Maven
   - Troubleshooting Guide : https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#tip--troubleshooting-embedded-maven-in-eclipse
   - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
@@ -62,47 +69,183 @@ I updated to this:
 
 ******* Course Overview *******
 
-Architectures are moving towards Microservices and Cloud. Kubernetes makes it easy to containerize your applications and deploy them to the cloud.
+Architectures are moving towards Microservices and Cloud. Docker makes it easy to containerize microservices. Kubernetes makes it easy to manage clusters with 1000's of containers running 1000's of microservices. Google Kubernetes Engine (GKE) makes it super easy to create Kubernetes Clusters. 
 
-Kubernetes is the No 1 Tool to orchestrate Docker containers. Learning Kubernetes would help you streamline your deployment processes and experiment easily with new frameworks and tools. 
+How about getting them all together and deploying Spring Boot Microservices to Kubernetes Clusters created on Google Cloud Platform using Google Kubernetes Engine (GKE)?
 
-In this handson course, we will use Docker and Kubernetes for a variety of Spring Boot Applications with Google Cloud using Google Kubernetes Engine:
-- REST APIs - Hello World and Todo - Jar
+In this handson course, we will use Docker and Kubernetes to deploy a variety of Spring Boot Applications on Google Cloud using Google Kubernetes Engine:
+- REST APIs - Hello World
 - Todo Web Application War
-- Full Stack Application with React and Spring Boot
 - CCS and CES Microservices
-- Eureka Naming Server and Zuul API Gateway
+
+You will implement Service Discovery, Centralized Configuration, Distributed Tracing and Load Balancing for Spring Boot Microservices deployed in Kubernetes Clusters.
+
+You will learn to use Helm Charts, Istio Service Mesh, Google Stackdriver and Spring Cloud Kubernetes to play with Java Microservices on Kubernetes.
 
 This course would be a perfect first step as an introduction to Kubernetes.
 
-You will be using containerizing and deploying a variety of projects to Kubernetes Clusters. These projects are created with  React (Frontend Framework), Spring Boot (REST API Framework), Spring (Dependency Management), Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
+You will be using containerizing (using Docker) and deploying a variety of projects to Kubernetes Clusters. These projects are created with  Spring Boot (REST API Framework), Spring (Dependency Management), Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
 ## What you'll learn
 - You will Learn the Fundamentals of Kubernetes from Zero, no previous experience required
-- You will learn the important Kubernetes Concepts
-- You will learn the important Kubernetes commands  
+- You will learn to deploy Spring Boot Microservices to Kubernetes Clusters on Google Cloud.
+- You will learn the Basic Kubernetes Concepts - Pods, Replica Sets and Deployment
+- You will learn the Basics of Docker - Images, Repository and Containers
+- You will learn the important Kubernetes commands 
 - You will understand the Kubernetes Architecture
 - You will learn to use Kubernetes to Manage Your Clusters
 - You will learn the basics of Microservices
-- You will Join 250,000 Learners having AMAZING LEARNING Experiences with in28Minutes
+- You will use Kubernetes Declaratively with YAML Configuration
+- You will learn to expose your Kubernetes Deployments with Services and Ingress
+- You will learn to use Kubernetes Config Maps and Secrets
+- You will make Zero Downtime Releases with Kubernetes
+- You will learn to Create Kubernetes clusters with Master Node and Nodes
+- You will learn to deploy Spring Boot Web Applications and Rest API to Kubernetes
+- You will become an expert on the Kubernetes command line tool - kubectl
+- You will play with Docker, Docker Compose and Kubernetes
+- You will use Persistent Storage with Kubernetes - PV and PVC
+- You will implement Service Discovery, Centralized Configuration, Distributed Tracing and Load Balancing for microservices deployed in Kubernetes
+- You will implement different Auto Scaling approaches with Kubernetes
+- You will use Google Stackdriver for Tracing, Error Reporting and Logging
+- You will integrate Spring Boot Microservices on Kubernetes with Istio
+- You will perform Blue Green Deployments and Canary Deployments with Istio
+- You will integrate Kiali, Graphana and Prometheus with Istio and Kubernetes
+- You will implement Distribute Tracing for Spring Boot Microsevices with Istio and Jaegar
+- You will use Helm to Automate Microservices Deployment on Kubernetes
+- You will Join 300,000 Learners having AMAZING LEARNING Experiences with in28Minutes
 
 ## Requirements
 - You have an attitude to learn while having fun :)
 - You have some programming experience with Java, Spring and Spring Boot
-- You DO NOT need to have any experience with Kubernetes
-- We will help you install Eclipse, Visual Studio Code, Git client, Docker Desktop and Node JS (for npm)
+- You DO NOT need to have any experience with Kubernetes or Docker
+- We will help you install Eclipse, Git client and Docker Desktop
 
 ## Who is this course for
 - You are a Java Spring Boot developer getting started with the Cloud
 - You want to deploy your Java applications with Kubernetes
+- You want to deploy your Spring Boot applications with Kubernetes
 - You are a Java Developer and You are curious about Kubernetes
-- You want to learn to play with Kubernetes and Spring Boot Microservices - Service Registry, Distributed Tracing and Zuul API Gateway
+- You want to learn to play with Docker, Kubernetes and Spring Boot Microservices
 
 ## Step By Step Details
 
 ### Introduction to the Course
-- 00 Step 01 - Deploy Spring Boot Applications to Kubernetes - Course Overview
-- 00 Step 02 - Deploy Spring Boot Applications to Kubernetes - Getting Started
+- 00 Step 01 - Kubernetes Crash Course for Java Developers - Promo
+- 00 Step 02 - Kubernetes Crash Course for Java Developers - Course Overview
+
+### Getting Started with Kubernetes and Google Kubernete Engine (GKE)
+- 01 Step 01 - Getting Started with Docker, Kubernetes and Google Kubernetes Engine
+- 01 Step 02 - Creating Google Cloud Account
+- 01 Step 03 - Creating Kubernetes Cluster with Google Kubernete Engine (GKE)
+- 01 Step 04 - Review Kubernetes Cluster and Learn Few Fun Facts about Kubernetes
+- 01 Step 05 - Deploy Your First Spring Boot Application to Kubernetes Cluster
+- 01 Step 06 - Quick Look at Kubernetes Concepts - Pods, Replica Sets and Deployment
+- 01 Step 07 - Understanding Pods in Kubernetes
+- 01 Step 08 - Understanding ReplicaSets in Kubernetes
+- 01 Step 09 - Understanding Deployment in Kubernetes
+- 01 Step 10 - Quick Review of Kubernetes Concepts - Pods, Replica Sets and Deployment
+- 01 Step 11 - Understanding Services in Kubernetes
+- 01 Step 12 - Quick Review of GKE on Google Cloud Console 
+- 01 Step 13 - Understanding Kubernetes Architecture - Master Node and Nodes
+- 01 Step 14 - Understand Google Cloud Regions and Zones
+
+### Deploying Spring Boot Hello World Rest API to Kubernetes
+- 02 Step 01 - Importing First 3 Spring Boot Projects into Eclipse
+- 02 Step 02 - Setting up 01 Spring Boot Hello World Rest API in Local
+- 02 Step 03 - Build Docker Image and Push to Docker Hub for Hello World Rest API
+- 02 Step 04 - Installing GCloud
+- 02 Step 05 - Installing Kubectl
+- 02 Step 06 - Deploy 01 Spring Boot Hello World Rest API to Kubernetes
+- 02 Step 07 - Generate Kubernetes YAML Configuration for Deployment and Service 
+- 02 Step 08 - Understand and Improve Kubernetes YAML Configuration
+
+### Playing with Declarative Configuration for Kubernetes
+- 03 Step 01 - Understanding Kubernetes YAML Configuration - Labels and Selectors
+- 03 Step 02 - Quick Fix to reduce release downtime with minReadySeconds
+- 03 Step 03 - Understanding Replica Sets in Depth - Using Kubernetes YAML Config
+- 03 Step 04 - Configure Multiple Kubernetes Deployments with One Service
+
+### Deploying Java Spring Boot Todo Web Application to Kubernetes
+- 04 Step 01 - Setting up 02 Spring Boot Todo Web Application in Local
+- 04 Step 02 - Pushing Docker Image to Docker Hub for Spring Boot Todo Web App
+- 04 Step 03 - Using Kubernetes YAML Config to Deploy Spring Boot Todo Web App
+- 04 Step 04 - Playing with Kubernetes Commands - Top Node and Pod
+
+### Deploying Java Todo Web Application using MySQL to Kubernetes
+- 05 Step 01 - Code Review of 03 Java Todo Web Application MySQL
+- 05 Step 02 - Running MySQL as Docker Container on Local
+- 05 Step 03 - Connect Spring Boot Java Todo Web App to MySQL on Local
+- 05 Step 04 - Create Docker Image for 03 Todo Web Application and Use Link to connect
+- 05 Step 05 - Playing with Docker Compose
+- 05 Step 06 - Using Kompose to generate Kubernetes Deployment Configuration
+- 05 Step 07 - Review Kubernetes YAML for MySQL and Java Web Application
+- 05 Step 08 - Deploy MySQL Database to Kubernetes Cluster
+- 05 Step 09 - Understanding Persistent Storage with Kubernetes - PV and PVC
+- 05 Step 10 - Using Config Maps for Centralized Configuration with Kubernetes
+- 05 Step 11 - Using Secrets with Kubernetes
+- 05 Step 12 - Creating a ClusterIP Kubernetes Service for MySQL Database
+
+### Deploying Basic Spring Boot Microservices to Kubernetes
+- 06 Step 01 - Introduction to Microservices
+- 06 Step 02 - Advantages of Microservices
+- 06 Step 03 - Microservices - Challenges
+- 06 Step 04 - Overview of CCS and CES Spring Boot Microservices
+- 06 Step 05 - Push Docker Images and Create Kubernetes Config for Microservices
+- 06 Step 06 - Deploying Spring Boot Microservices to Kubernetes Cluster
+- 06 Step 07 - Microservices and Kubernetes Service Discovery - Part 1
+- 06 Step 08 - Microservices and Kubernetes Service Discovery - Part 2 DNS
+- 06 Step 09 - Microservice Discovery, Centralized Configuration and Load Balancing with Kubernetes
+- 06 Step 10 - Using Kubernetes Ingress to Simplify Microservice Access
+- 06 Step 11 - Review Google Cloud Load Balancer Backend and Frontends with Ingress
+
+### Integrating Spring Cloud Kubernetes with Spring Boot Microservices
+- 07 Step 01 - Using Spring Cloud Kubernetes with Microservices - Project Review
+- 07 Step 02 - Deploying Spring Cloud Kubernetes Microservices
+- 07 Step 03 - Using RBAC to allow Ribbon to access Service Discovery APIs
+- 07 Step 04 - Using Spring Cloud Kubernetes Config to load ConfigMaps
+- 07 Step 05 - Understanding Auto Scaling approaches with Kubernetes
+- 07 Step 06 - Implementing Horizontal Pod Autoscaling with Kubernetes
+- 07 Step 07 - Deleting Your Kubernetes Cluster
+
+### Integrating Spring Boot Microservices on Kubernetes with Google Stackdriver
+- 08 Step 01 - Creating New Cluster to Play With Google Stackdriver
+- 08 Step 02 - Review Spring Boot Microservices integrated with Google Stackdriver
+- 08 Step 03 - Enabling Stackdriver APIs for Your Google Cloud Account
+- 08 Step 04 - Deploy Spring Boot Microservices and Explore Google Stackdriver Tracing
+- 08 Step 05 - Exploring Google Stackdriver Error Reporting and Logging
+
+### Integrating Spring Boot Microservices on Kubernetes with Istio
+- 09 Step 01 - Creating new Kubernetes Cluster for Playing with Istio
+- 09 Step 02 - Understanding Service Mesh, Istio and Sidecar Pattern
+- 09 Step 03 - Installing Istio on Kubernetes Cluster - CRD and Istio Components
+- 09 Step 04 - Review Istio Installation and Deploy Spring Boot App with Side Cars
+- 09 Step 05 - Increasing Kubernetes Cluster Size to 3 Nodes
+- 09 Step 06 - Understanding Gateways and Virtual Services for Istio
+- 09 Step 07 - Basic Deployment Strategies - Rolling Updates and Recreate
+- 09 Step 08 - Setting up Multiple Versions of Spring Boot Applications
+- 09 Step 09 - Configure Destination Rules and Subsets to implement Mirroring
+- 09 Step 10 - Executing Blue Green and Canary Deployments with Kubernetes
+- 09 Step 11 - Review Spring Boot Microservices integration with Istio
+- 09 Step 12 - Observing Istio Service Mesh with Kiali
+- 09 Step 13 - Monitoring Istio Service Mesh with Graphana and Prometheus
+- 09 Step 14 - Distribute Tracing for Spring Boot Microsevices with Istio and Jaegar
+- 09 Step 15 - Delete Kubernetes Cluster for Playing with Istio
+
+### Using Helm to Automate Microservices Deployment on Kubernetes
+- 10 Step 01 - Understanding Helm Basics and Setting up Kubernetes Cluster
+- 10 Step 02 - Using Helm Charts to deploy Spring Boot Microservice to Kubernetes
+- 10 Step 03 - Using Helm Charts to manage Releases to Kubernetes Cluster
+
+### Appendix - Introduction to Docker in 9 Steps
+- 11 Step 01 - Installing Docker - Docker
+- 11 Step 02 - Your First Docker Usecase - Deploy a Spring Boot Application
+- 11 Step 03 - Important Docker Concepts - Registry, Repository, Tag, Image and Container
+- 11 Step 04 - Playing with Docker Images and Containers
+- 11 Step 05 - Understanding Docker Architecture - Docker Client, Docker Engine
+- 11 Step 06 - Why is Docker Popular
+- 11 Step 07 - Playing with Docker Images
+- 11 Step 08 - Playing with Docker Containers
+- 11 Step 09 - Playing with Docker Commands - stats, system
 
 
 ```sh
@@ -110,6 +253,286 @@ for file in *; do mv "${file}" "${file//-/ }"; done
 for file in *; do mv "${file}" "${file//   / - }"; done
 for file in *; do mv "${file}" "${file//01 Step/Step}"; done
 ```
+
+### Commands Executed during the course
+
+```
+
+docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
+
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+kubectl scale deployment hello-world-rest-api --replicas=3
+kubectl delete pod hello-world-rest-api-58ff5dd898-62l9d
+kubectl autoscale deployment hello-world-rest-api --max=10 --cpu-percent=70
+kubectl edit deployment hello-world-rest-api #minReadySeconds: 15
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+
+gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=DUMMY_IMAGE:TEST
+kubectl get events --sort-by=.metadata.creationTimestamp
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+kubectl get events --sort-by=.metadata.creationTimestamp
+kubectl get componentstatuses
+kubectl get pods --all-namespaces
+
+kubectl get events
+kubectl get pods
+kubectl get replicaset
+kubectl get deployment
+kubectl get service
+
+kubectl get pods -o wide
+
+kubectl explain pods
+kubectl get pods -o wide
+
+kubectl describe pod hello-world-rest-api-58ff5dd898-9trh2
+
+kubectl get replicasets
+kubectl get replicaset
+
+kubectl scale deployment hello-world-rest-api --replicas=3
+kubectl get pods
+kubectl get replicaset
+kubectl get events
+kubectl get events --sort.by=.metadata.creationTimestamp
+
+kubectl get rs
+kubectl get rs -o wide
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=DUMMY_IMAGE:TEST
+kubectl get rs -o wide
+kubectl get pods
+kubectl describe pod hello-world-rest-api-85995ddd5c-msjsm
+kubectl get events --sort-by=.metadata.creationTimestamp
+
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
+kubectl get events --sort-by=.metadata.creationTimestamp
+kubectl get pods -o wide
+kubectl delete pod hello-world-rest-api-67c79fd44f-n6c7l
+kubectl get pods -o wide
+kubectl delete pod hello-world-rest-api-67c79fd44f-8bhdt
+
+kubectl get componentstatuses
+kubectl get pods --all-namespaces
+
+gcloud auth login
+kubectl version
+gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
+
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
+
+kubectl rollout history deployment hello-world-rest-api
+kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT --record
+
+kubectl rollout history deployment hello-world-rest-api
+kubectl rollout status deployment hello-world-rest-api
+kubectl rollout undo deployment hello-world-rest-api --to-revision=3
+kubectl rollout status deployment hello-world-rest-api
+kubectl rollout undo deployment hello-world-rest-api --to-revision=3
+kubectl rollout status deployment hello-world-rest-api
+kubectl rollout history deployment hello-world-rest-api
+kubectl get pods
+kubectl logs hello-world-rest-api-67c79fd44f-d6q9z
+kubectl logs hello-world-rest-api-67c79fd44f-d6q9z -f
+
+kubectl get deployment hello-world-rest-api
+kubectl get deployment hello-world-rest-api -o wide
+kubectl get deployment hello-world-rest-api -o yaml
+kubectl get deployment hello-world-rest-api -o yaml > deployment.yaml
+kubectl get service hello-world-rest-api -o yaml
+kubectl get service hello-world-rest-api -o yaml > service.yaml
+
+kubectl delete all -l app=hello-world-rest-api
+kubectl get all
+kubectl apply -f deployment.yaml
+kubectl get all
+
+kubectl diff -f deployment.yaml 
+kubectl apply -f deployment.yaml 
+kubectl delete all -l app=hello-world-rest-api
+kubectl get all -o wide
+
+mvn clean install
+docker push in28min/todo-web-application-h2:0.0.1-SNAPSHOT
+kubectl delete all -l app=hello-world-rest-api
+
+kubectl get pods
+kubectl get pods --all-namespaces
+kubectl get pods -l app=todo-web-application-h2
+kubectl get pods -l app=todo-web-application-h2 --all-namespaces
+kubectl get services --all-namespaces
+kubectl get services --all-namespaces --sort-by=.spec.type
+kubectl get services --all-namespaces --sort-by=.metadata.name
+kubectl cluster-info
+kubectl top node
+kubectl top pod
+
+kubectl get services
+kubectl get svc
+kubectl get ev
+kubectl get rs
+
+kubectl get ns
+kubectl get nodes
+kubectl get no
+kubectl get po
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:5.7
+docker run -p 8080:8080 in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+docker run -p 8080:8080 --link=mysql --env RDS_HOSTNAME=mysql in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+
+docker-compose --version
+docker-compose up
+
+brew install kompose
+kompose convert
+
+kubectl delete all -l app=todo-web-application-h2
+
+kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
+kubectl get svc
+kubectl apply -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
+docker push in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+kubectl logs todo-web-application-b65cc44d9-7h9pr -f
+
+kubectl apply -f mysql-service.yaml
+kubectl get pv
+kubectl get pvc
+kubectl describe pod/mysql-5ccbbbdcd8-5zjqg 
+
+kubectl create configmap todo-web-application-config --from-literal=RDS_DB_NAME=todos
+kubectl get configmap todo-web-application-config
+kubectl describe configmap/todo-web-application-config
+
+kubectl edit configmap/todo-web-application-config
+kubectl scale deployment todo-web-application --replicas=0
+kubectl scale deployment todo-web-application --replicas=1
+
+kubectl edit configmap/todo-web-application-config
+kubectl apply -f todo-web-application-deployment.yaml 
+kubectl edit configmap todo-web-application-config
+kubectl scale deployment todo-web-application --replicas=0
+kubectl scale deployment todo-web-application --replicas=1
+
+kubectl create secret generic todo-web-application-secrets --from-literal=RDS_PASSWORD=dummytodos
+kubectl get secret/todo-web-application-secrets
+kubectl describe secret/todo-web-application-secrets
+kubectl apply -f todo-web-application-deployment.yaml 
+
+kubectl delete -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
+
+apiVersion: v1
+data:
+  RDS_DB_NAME: todos
+  RDS_HOSTNAME: mysql
+  RDS_PORT: "3306"
+  RDS_USERNAME: todos-user
+kind: ConfigMap
+metadata:
+  name: todo-web-application-config
+  namespace: default
+
+cd /in28Minutes/git/kubernetes-crash-course/04-currency-exchange-microservice-basic 
+mvn clean install
+docker push in28min/currency-exchange:0.0.1-RELEASE
+kubectl apply -f deployment.yaml
+curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
+
+kubectl create configmap currency-conversion --from-literal=YOUR_PROPERTY=value --from-literal=YOUR_PROPERTY_2=value2
+
+kubectl autoscale deployment currency-exchange --min=1 --max=3 --cpu-percent=10 
+kubectl get events
+kubectl get hpa
+kubectl get hpa -o yaml
+kubectl get hpa -o yaml > 01-hpa.yaml
+kubectl get hpa currency-exchange -o yaml > 01-hpa.yaml
+
+kubectl set image deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
+kubectl apply -f ingress.yaml
+kubectl get ingress
+kubectl describe gateway-ingress
+kubectl describe gateway gateway-ingress
+kubectl describe ingress gateway-ingress
+kubectl apply -f rbac.yml
+ 
+docker push in28min/currency-conversion:0.0.5-RELEASE
+
+kubectl create configmap currency-conversion --from-literal=YOUR_PROPERTY=value --from-literal=YOUR_PROPERTY_2=value2
+
+kubectl describe configmap/currency-conversion
+
+
+kubectl label namespace default istio-injection=enabled
+
+kubectl get svc --namespace istio-system
+kubectl apply -f 01-helloworld-deployment.yaml 
+kubectl apply -f 02-creating-http-gateway.yaml 
+kubectl apply -f 03-creating-virtualservice-external.yaml 
+kubectl get svc --namespace istio-system
+kubectl get svc istio-ingressgateway --namespace istio-system
+kubectl scale deployment hello-world-rest-api --replicas=4
+kubectl delete all -l app=hello-world-rest-api
+kubectl apply -f 04-helloworld-multiple-deployments.yaml 
+kubectl apply -f 05-helloworld-mirroring.yaml 
+kubectl apply -f 06-helloworld-canary.yaml 
+watch -n 0.1 curl 35.223.25.220/hello-world
+
+gcloud container clusters get-credentials in28minutes-cluster-istio --zone us-central1-a --project solid-course-258105
+kubectl create namespace istio-system
+curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.2.2 sh -
+ls istio-1.2.2
+ls istio-1.2.2/install/kubernetes/helm/istio-init/files/crd*yaml
+cd istio-1.2.2
+for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
+helm template install/kubernetes/helm/istio --name istio --set global.mtls.enabled=false --set tracing.enabled=true --set kiali.enabled=true --set grafana.enabled=true --namespace istio-system > istio.yaml
+kubectl apply -f istio.yaml
+kubectl get pods --namespace istio-system
+kubectl get services --namespace istio-system
+
+
+docker push in28min/currency-exchange:3.0.0-RELEASE
+kubectl apply -f deployment.yaml 
+kubectl apply -f 11-istio-scripts-and-configuration/07-hw-virtualservice-all-services.yaml 
+kubectl get secret -n istio-system kiali
+kubectl create secret generic kiali -n istio-system --from-literal=username=admin --from-literal=passphrase=admin
+kubectl get svc --namespace istio-system
+
+
+gcloud container clusters get-credentials helm-cluster --zone us-central1-a --project solid-course-258105
+helm init
+kubectl get deploy,svc tiller-deploy -n kube-system
+clear
+unzip 12-helm.zip
+ls helm-tiller.sh
+chmod +x helm-tiller.sh
+
+gcloud container clusters get-credentials helm-cluster --zone us-central1-a --project solid-course-258105
+./helm-tiller.sh
+cat helm-tiller.sh 
+kubectl get deploy,svc tiller-deploy -n kube-system
+helm install ./currency-exchange/ --name=currency-services
+helm install ./currency-conversion/ --name=currency-services-1
+helm install ./currency-conversion/ --name=currency-services-3 --debug --dry-run
+helm history currency-services-1
+helm upgrade currency-services-1 ./currency-conversion/
+helm rollback currency-services-1 1
+helm upgrade currency-services-1 ./currency-conversion/ --debug --dry-run
+helm upgrade currency-services-1 ./currency-conversion/
+helm history currency-services-1
+
+```
+## Notes
+
+- Assume replicas = 200 maxUnavailable = 20% maxSurge = 20%. Max pods that can be unavailable during release = 20%(maxUnavailable) * 200 = 40. Max pods used during release = 200 + 20%(maxSurge) * 200 = 240
+- updateMode: "Auto"
+- Step 1 : Install all the Istio Custom Resource Definitions (CRD)
+- Step 2 : Install Istio with Components for graphana, prometheus, tracing(jaeger), kiali as subcharts using Helm Charts.
+- Fun Fact : istio.yaml has 18,000 lines of configuration!
+- Step 3 : Verify Intallation of Istio
+- Step 4 : Enable Adding Istio Side Cars in each Pod
 
 ## Diagrams
 
@@ -524,1006 +947,6 @@ HostOS -- CloudInfrastructure [style=invis]
 }
 ```
 
-
-### Commands Executed during the course
-
-```
-
-docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
-
- kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
-  505  kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
-  506  kubectl scale deployment hello-world-rest-api --replicas=3
-  507  kubectl delete pod hello-world-rest-api-58ff5dd898-62l9d
-  508  kubectl autoscale deployment hello-world-rest-api --max=10 --cpu-percent=70
-  509  kubectl edit deployment hello-world-rest-api
-  510  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
-
-1  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-    2  clear
-    3  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-    4  kubectl
-    5  clear
-    6  kubectl create deployment todo-rest-api-h2 --image=  completion     Output shell completion code for the specified shell (bash or zsh)
-    7  Other Commands:
-    8  clear
-    9  kubectl create deployment todo-rest-api-h2 --image=in28min/todo-rest-api-h2:1.0.0.RELEASE
-   10  kubectl get deployments
-   11  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-   12  kubectl create deployment todo-rest-api-h2 --image=in28min/todo-rest-api-h2:1.0.0.RELEASE
-   13  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-   14  kubectl version
-   15  kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:1.0.0.RELEASE
-   16  kubectl expose deployment --type=LoadBalancer --port=8080
-   17  clear
-   18  kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
-   19  clear
-   20  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-   21  kubectl version
-   22  kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
-   23  kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
-   24  kubectl get events
-   25  kubectl get pods
-   26  kubectl get replicaset
-   27  kubectl get deployment
-   28  kubectl get service
-   29  clear
-   30  kubectl get pods -o wide
-   31  kubectl explain pods
-   32  kubectl get pods -o wide
-   33  clear
-   34  kubectl get pods
-   35  kubectl describe pod hello-world-rest-api-58ff5dd898-9trh2
-   36  clear
-   37  kubectl get replicasets
-   38  kubectl get replicaset
-   39  kubectl get rs
-   40  kubectl get pods -o wide
-   41  kubectl delete pods hello-world-rest-api-58ff5dd898-9trh2
-   42  kubectl get pods -o wide
-   43  kubectl scale deployment hello-world-rest-api --replicas=3
-   44  kubectl get pods
-   45  kubectl get replicaset
-   46  kubectl get events
-   47  kubectl get events --sort.by=.metadata.creationTimestamp
-   48  kubectl get events --sort-by=.metadata.creationTimestamp
-   49  kubectl explain replicaset
-   50  clear
-   51  kubectl get rs
-   52  kubectl get rs -o wide
-   53  kubectl set image deployment hello-world-rest-api hello-world-rest-api=DUMMY_IMAGE:TEST
-   54  kubectl get rs -o wide
-   55  kubectl get pods
-   56  kubectl describe pod hello-world-rest-api-85995ddd5c-msjsm
-   57  clear
-   58  kubectl get events --sort-by=.metadata.creationTimestamp
-   59  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.2.RELEASE
-   60  kubectl get pods
-   61  kubectl get res
-   62* kubectl get even
-   63  kubectl get events --sort-by=.metadata.creationTimestamp
-   64  clear
-   65  kubectl get pods -o wide
-   66  kubectl delete pod hello-world-rest-api-67c79fd44f-n6c7l
-   67  kubectl get pods -o wide
-   68  kubectl delete pod hello-world-rest-api-67c79fd44f-8bhdt
-   69  kubectl get pods -o wide
-   70  clear
-   71  kubectl get services
-   72  kubectl get componentstatuses
-   73  kubectl get pods --all-namespaces
-   74  history
-
-watch -n 0.1 curl 35.232.144.134:8080/hello-world
-
-   gcloud init
-  502  clear
-  503  gcloud auth login
-  504  kubectl version
-  505  kubectl version
-  506  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-  507  kubectl version
-  508  clear
-  509  kubectl set image deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
-  510  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
-  511  kubectl get pods
-  512  kubectl get pods
-  513  clear
-  514  kubectl rollout history deployment hello-world-rest-api
-  515  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT --record
-  516  kubectl rollout history deployment hello-world-rest-api
-  517  kubectl rollout status deployment hello-world-rest-api
-  518  kubectl rollout undo deployment hello-world-rest-api --to-revision=3
-  519  kubectl rollout status deployment hello-world-rest-api
-  520  kubectl rollout undo deployment hello-world-rest-api --to-revision=3
-  521  kubectl rollout status deployment hello-world-rest-api
-  522  kubectl rollout history deployment hello-world-rest-api
-  523  kubectl get pods
-  524  kubectl logs hello-world-rest-api-67c79fd44f-d6q9z
-  525  kubectl logs hello-world-rest-api-67c79fd44f-d6q9z -f
-  526  clear
-  527  kubectl get deployment hello-world-rest-api
-  528  kubectl get deployment hello-world-rest-api -o wide
-  529  kubectl get deployment hello-world-rest-api -o yaml
-  530  kubectl get deployment hello-world-rest-api -o yaml > deployment.yaml
-  531  kubectl get service hello-world-rest-api -o yaml
-  532  kubectl get service hello-world-rest-api -o yaml > service.yaml
-  533  clear
-  534  kubectl apply -f deployment.yaml
-  535  kubectl get pods
-  536  kubectl delete all -l app=hello-world-rest-api
-  537  kubectl get all
-  538  kubectl apply -f deployment.yaml
-  539  kubectl get all
-  540  kubectl get all
-  541  clear
-  542  kubectl diff -f deployment.yaml 
-  543  kubectl apply -f deployment.yaml --trial-run
-  544  kubectl apply -f deployment.yaml --dry-run
-  545  kubectl get all
-  546  clear
-  547  kubectl apply -f deployment.yaml 
-  548  kubectl get pods
-  549  kubectl apply -f deployment.yaml 
-  550  kubectl get pods
-  551  kubectl get pods
-  552  kubectl get pods
-  553  kubectl get pods
-  554  kubectl apply -f deployment.yaml 
-  555  kubectl delete all -l app=hello-world-rest-api
-  556  kubectl apply -f deployment.yaml 
-  557  kubectl apply -f deployment.yaml 
-  558  kubectl get all
-  559  kubectl get all
-  560  kubectl apply -f deployment.yaml 
-  561  kubectl get pods
-  562  kubectl get rs
-  563  kubectl delete pod hello-world-rest-api-4n2cg
-  564  kubectl get rs
-  565  kubectl get pods
-  566  kubectl delete pod hello-world-rest-api-pvnpl
-  567  kubectl get pods
-  568  kubectl delete all -l app=hello-world-rest-api
-  569  clear
-  570  kubectl apply -f deployment.yaml 
-  571  kubectl get pods
-  572  kubectl get all
-  573  kubectl get pods -o wide
-  574  clear
-  575  kubectl get all -o wide
-  576  kubectl get all -o wide
-  577  kubectl apply -f deployment.yaml 
-  578  kubectl apply -f deployment.yaml 
-
-581  cd ../02-todo-web-application-h2/
-  582  pwd
-  583  mvn clean install
-  584  docker push in28min/todo-web-application-h2:0.0.1-SNAPSHOT
-  585  clear
-  586  kubectl get all
-  587  kubectl delete all -l app=hello-world-rest-api
-  588  kubectl get all
-  589  kubectl apply -f deployment.yaml 
-  590  kubectl get all
-  591  kubectl get all
-  592  clear
-  593  kubectl get pods
-  594  kubectl get pods --all-namespaces
-  595  kubectl get pods -l app=todo-web-application-h2
-  596  kubectl get pods -l app=todo-web-application-h2 --all-namespaces
-  597  kubectl get services --all-namespaces
-  598  kubectl get services --all-namespaces --sort-by=.spec.type
-  599  kubectl get services --all-namespaces --sort-by=.metadata.name
-  600  clear
-  601  kubectl cluster-info
-  602  kubectl top node
-  603  kubectl top pod
-  604  clear
-  605  kubectl get services
-  606  kubectl get svc
-  607  kubectl get ev
-  608  kubectl get rs
-  609  kubectl get ns
-  610  kubectl get nodes
-  611  kubectl get no
-  612  kubectl get po
-  613  docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:5.7
-  614  cd ../03-todo-web-application-mysql/
-  615  clear
-  616  pwd
-  617  mvn clean install
-  618  docker run -p 8080:8080 in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  619  docker run -p 8080:8080 --link=mysql --env RDS_HOSTNAME=mysql in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  620  docker-compose up
-  621  clear
-  622  docker-compose --version
-  623  docker container ls
-  624  docker container stop 5d3bc64e2c07
-  625  docker container rm 5d3bc64e2c07
-  626  pwd
-  627  ls
-  628  docker-compose up
-  629  clear
-  630  brew install kompose
-  631  clear
-  632  ls
-  633  kompose convert
-  634  kubectl get all
-  635  kubectl delete all -l app=todo-web-application-h2
-  636  clear
-  637  ls
-  638  ls *.yaml
-  639  clear
-  640  clear
-  641  ls *.yaml
-  642  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  643  kubectl get status
-  644  kubectl get all
-  645* kubectl delete all 
-  646  kubectl get endpoints
-  647  kubectl get all
-  648  kubectl get nodes
-  649  kubectl get nodes -o wide
-  650  kubectl get pods
-  651  kubectl get pods -o wide
-  652  kubectl get all
-  653  kubectl delete deployment.apps/mysql
-  654  kubectl delete replicaset.apps/mysql-5ccbbbdcd8
-  655  kubect get all
-  656  kubectl get all
-  657  kubectl delete service/mysql
-  658  clear
-  659  ls
-  660  clear
-  661  ls *.yaml
-  662  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  663  kubectl get all
-  664  kubectl get svc
-  665  kubectl get svc --watch
-  666  clear
-  667  ls *.yaml
-  668  kubectl apply -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  669  kubectl get all
-  670  docker push in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  671  kubectl get all
-  672  kubectl delete pod/todo-web-application-b65cc44d9-jfmbj
-  673  kubectl get all
-  674  kubectl logs todo-web-application-b65cc44d9-7h9pr -f
-  675  kubectl get svc
-  676  kubectl apply -f mysql-service.yaml
-  677  clear
-  678  kubectl get all
-  679  history| grep "kubectl delete"
-  680  kubectl delete -f mysql-service.yaml
-  681  kubectl delete -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml
-  682  kubectl delete -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  683  kubectl get all
-  684  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  685  kubectl get all
-  686  kubectl apply -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  687  kubectl get all
-  688  kubectl get all
-  689  kubectl get pv
-  690  kubectl get pvc
-  691  kubectl describe pod/mysql-5ccbbbdcd8-5zjqg 
-  692  clear
-  693  kubectl get pv
-  694  kubectl get pvc
-  695  clear
-  696  kubectl get pv
-  697  kubectl get pvc
-  698  clear
-  699  kubectl create configmap todo-web-application-config --from-literal=RDS_DB_NAME=todos
-  700  kubectl get configmap todo-web-application-config
-  701  kubectl describe configmap/todo-web-application-config
-  702  kubectl apply -f todo-web-application-deployment.yaml 
-  703  kubectl get pods
-  704  kubectl edit configmap/todo-web-application-config
-  705  kubectl scale deployment todo-web-application --replicas=0
-  706  kubectl scale deployment todo-web-application --replicas=1
-  707  kubectl get pods
-  708  kubectl logs todo-web-application-59f6776c94-9j77f -f
-  709  kubectl edit configmap/todo-web-application-config
-  710  kubectl apply -f todo-web-application-deployment.yaml 
-  711  kubectl get pods
-  712  kubectl logs todo-web-application-644d56758c-9sd7w -f
-  713  kubectl edit configmap todo-web-application-config
-  714  kubectl scale deployment todo-web-application --replicas=0
-  715  kubectl scale deployment todo-web-application --replicas=1
-  716  kubectl get pods
-  717  kubectl logs todo-web-application-644d56758c-qpfws -f
-  718  clear
-  719  kubectl create secret generic todo-web-application-secrets --from-literal=RDS_PASSWORD=dummytodos
-  720  kubectl get secret/todo-web-application-secrets
-  721  kubectl describe secret/todo-web-application-secrets
-  722  kubectl apply -f todo-web-application-deployment.yaml 
-  723  kubectl get pods
-  724  kubectl logs todo-web-application-5cc485458b-sqbtt -f
-  725  clear
-  726  kubectl delete service mysql
-  727  kubectl apply -f mysql-service.yaml 
-  728  kubectl get services
-  729  kubectl get all
-  730  kubectl edit configmap todo-web-application-config
-  731  clear
-  732  ls
-  733  clear
-  734  ls *.yaml
-  735  kubectl delete -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
-
-apiVersion: v1
-data:
-  RDS_DB_NAME: todos
-  RDS_HOSTNAME: mysql
-  RDS_PORT: "3306"
-  RDS_USERNAME: todos-user
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2019-11-09T13:09:16Z"
-  name: todo-web-application-config
-  namespace: default
-  resourceVersion: "702668"
-  selfLink: /api/v1/namespaces/default/configmaps/todo-web-application-config
-  uid: 21cb4b10-02f2-11ea-981b-42010a8000df
-
-501  cd /in28Minutes/git/kubernetes-crash-course/04-currency-exchange-microservice-basic 
-  502  mvn clean install
-  503  clear
-  504  pwd
-  505  mvn clean install
-  506  clear
-  507  pwd
-  508  mvn clean install
-  509  miner f39fc9d0cf82
-  519  docker push in28min/currency-exchange:0.0.1-RELEASE
-  520  kubectl apply -f deployment.yaml
-  521  kubectl get all
-  522  kubectl get all
-  523  kubectl get all
-  524  kubectl logs pod/currency-exchange-578ddd7b8d-b8pjl 
-  525  kubectl logs pod/currency-exchange-578ddd7b8d-b8pjl -f
-  526  kubectl get all
-  527  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  528  clear
-  529  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR|json
-  530  clear
-  531  curl 34.67.103.178:8000/currency-exchange/from/USD/to/IN
-  532  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  533  clear
-  534  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  535  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  536  clear
-  537  kubectl get pods
-  538  kubectl logs currency-exchange-578ddd7b8d-b8pjl -f
-  kubectl create configmap currency-conversion --from-literal=YOUR_PROPERTY=value --from-literal=YOUR_PROPERTY_2=value2
-  539  kubectl get all
-  540  kubectl get svc
-  541  kubectl apply -f deployment.yaml 
-  542  kubectl get services
-  543  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-  544  kubectl apply -f deployment.yaml 
-  545  kubectl get all
-  546  clear
-  547  kubectl get pods
-  548  kubectl apply -f deployment.yaml 
-  549  kubectl get pods
-  550  kubectl get pods
-  551  kubectl get pods
-  552  clear
-  553  kubectl get pods
-  554  clear
-  555  kubectl get pods
-  556  kubectl get pods
-  557  kubectl get pods
-  558  kubectl get pods
-  559  clear
-  560  kubectl get pods
-  561  kubectl get pods
-  562  kubectl get pods
-  563  clear
-  564  kubectl get pods
-  565  kubectl get pods
-  566  kubectl get pods
-  567  kubectl get pods
-  568  kubectl logs currency-exchange-57cd8f789b-lfhh6 -f
-  569  kubectl apply -f deployment.yaml 
-  570  kubectl get pods
-  571  kubectl logs currency-exchange-dfbbd955b-x9kzc -f
-  572  kubectl get pods
-  573  kubectl get pods
-  574  kubectl get pods
-  575  kubectl get pods
-  576  kubectl get pods
-  577  kubectl get pods
-  578  kubectl top pods
-  579  kubectl top pods
-  580  kubectl top pods
-  581  kubectl top pods
-  582  kubectl top pods
-  583  kubectl top pods
-  584  kubectl top pods
-  585  kubectl top pods
-  586  kubectl top pods
-  587  kubectl top pods
-  588  clear
-  589  kubectl autoscale deployment currency-exchange --min=1 --max=3 --cpu-percent=10 
-  590  kubectl get pods
-  591  kubectl get pods
-  592  kubectl get events
-  593* 
-  594  kubectl get hpa
-  595  kubectl get hpa -o yaml
-  596  kubectl get hpa -o yaml > 01-hpa.yaml
-  597  kubectl get hpa currency-exchange -o yaml > 01-hpa.yaml
-  507  kubectl get pods
-  508  kubectl get pods
-  509  kubectl get pods
-  510  kubectl get svcs
-  511  kubectl get services
-  512  kubectl get svc
-  513  kubectl get svc
-  514  kubectl get svc
-  515  kubectl get svc --watch
-   83  exec -l $SHELL
-   84  gcloud init
-   85  clear
-   86  gcloud auth login
-   87  kubectl version
-   88  kubectl version
-   89  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-   90  kubectl version
-   91  clear
-   92  kubectl set image deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
-   93  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT
-   94  kubectl get pods
-   95  kubectl get pods
-   96  clear
-   97  kubectl rollout history deployment hello-world-rest-api
-   98  kubectl set image deployment hello-world-rest-api hello-world-rest-api=in28min/hello-world-rest-api:0.0.4-SNAPSHOT --record
-   99  kubectl rollout history deployment hello-world-rest-api
-  100  kubectl rollout status deployment hello-world-rest-api
-  101  kubectl rollout undo deployment hello-world-rest-api --to-revision=3
-  102  kubectl rollout status deployment hello-world-rest-api
-  103  kubectl rollout undo deployment hello-world-rest-api --to-revision=3
-  104  kubectl rollout status deployment hello-world-rest-api
-  105  kubectl rollout history deployment hello-world-rest-api
-  106  kubectl get pods
-  107  kubectl logs hello-world-rest-api-67c79fd44f-d6q9z
-  108  kubectl logs hello-world-rest-api-67c79fd44f-d6q9z -f
-  109  clear
-  110  kubectl get deployment hello-world-rest-api
-  111  kubectl get deployment hello-world-rest-api -o wide
-  112  kubectl get deployment hello-world-rest-api -o yaml
-  113  kubectl get deployment hello-world-rest-api -o yaml > deployment.yaml
-  114  kubectl get service hello-world-rest-api -o yaml
-  115  kubectl get service hello-world-rest-api -o yaml > service.yaml
-  116  clear
-  117  kubectl apply -f deployment.yaml
-  118  kubectl get pods
-  119  kubectl delete all -l app=hello-world-rest-api
-  120  kubectl get all
-  121  kubectl apply -f deployment.yaml
-  122  kubectl get all
-  123  kubectl get all
-  124  clear
-  125  kubectl diff -f deployment.yaml 
-  126  kubectl apply -f deployment.yaml --trial-run
-  127  kubectl apply -f deployment.yaml --dry-run
-  128  kubectl get all
-  129  clear
-  130  kubectl apply -f deployment.yaml 
-  131  kubectl get pods
-  132  kubectl apply -f deployment.yaml 
-  133  kubectl get pods
-  134  kubectl get pods
-  135  kubectl get pods
-  136  kubectl get pods
-  137  kubectl apply -f deployment.yaml 
-  138  kubectl delete all -l app=hello-world-rest-api
-  139  kubectl apply -f deployment.yaml 
-  140  kubectl apply -f deployment.yaml 
-  141  kubectl get all
-  142  kubectl get all
-  143  kubectl apply -f deployment.yaml 
-  144  kubectl get pods
-  145  kubectl get rs
-  146  kubectl delete pod hello-world-rest-api-4n2cg
-  147  kubectl get rs
-  148  kubectl get pods
-  149  kubectl delete pod hello-world-rest-api-pvnpl
-  150  kubectl get pods
-  151  kubectl delete all -l app=hello-world-rest-api
-  152  clear
-  153  kubectl apply -f deployment.yaml 
-  154  kubectl get pods
-  155  kubectl get all
-  156  kubectl get pods -o wide
-  157  clear
-  158  kubectl get all -o wide
-  159  kubectl get all -o wide
-  160  kubectl apply -f deployment.yaml 
-  161  kubectl apply -f deployment.yaml 
-  162  history
-  163  clear
-  164  cd ../02-todo-web-application-h2/
-  165  pwd
-  166  mvn clean install
-  167  docker push in28min/todo-web-application-h2:0.0.1-SNAPSHOT
-  168  clear
-  169  kubectl get all
-  170  kubectl delete all -l app=hello-world-rest-api
-  171  kubectl get all
-  172  kubectl apply -f deployment.yaml 
-  173  kubectl get all
-  174  kubectl get all
-  175  clear
-  176  kubectl get pods
-  177  kubectl get pods --all-namespaces
-  178  kubectl get pods -l app=todo-web-application-h2
-  179  kubectl get pods -l app=todo-web-application-h2 --all-namespaces
-  180  kubectl get services --all-namespaces
-  181  kubectl get services --all-namespaces --sort-by=.spec.type
-  182  kubectl get services --all-namespaces --sort-by=.metadata.name
-  183  clear
-  184  kubectl cluster-info
-  185  kubectl top node
-  186  kubectl top pod
-  187  clear
-  188  kubectl get services
-  189  kubectl get svc
-  190  kubectl get ev
-  191  kubectl get rs
-  192  kubectl get ns
-  193  kubectl get nodes
-  194  kubectl get no
-  195  kubectl get po
-  196  docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:5.7
-  197  cd ../03-todo-web-application-mysql/
-  198  clear
-  199  pwd
-  200  mvn clean install
-  201  docker run -p 8080:8080 in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  202  docker run -p 8080:8080 --link=mysql --env RDS_HOSTNAME=mysql in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  203  docker-compose up
-  204  clear
-  205  docker-compose --version
-  206  docker container ls
-  207  docker container stop 5d3bc64e2c07
-  208  docker container rm 5d3bc64e2c07
-  209  pwd
-  210  ls
-  211  docker-compose up
-  212  clear
-  213  brew install kompose
-  214  clear
-  215  ls
-  216  kompose convert
-  217  kubectl get all
-  218  kubectl delete all -l app=todo-web-application-h2
-  219  clear
-  220  ls
-  221  ls *.yaml
-  222  clear
-  223  clear
-  224  ls *.yaml
-  225  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  226  kubectl get status
-  227  kubectl get all
-  228  kubectl delete all 
-  229  kubectl get endpoints
-  230  kubectl get all
-  231  kubectl get nodes
-  232  kubectl get nodes -o wide
-  233  kubectl get pods
-  234  kubectl get pods -o wide
-  235  kubectl get all
-  236  kubectl delete deployment.apps/mysql
-  237  kubectl delete replicaset.apps/mysql-5ccbbbdcd8
-  238  kubect get all
-  239  kubectl get all
-  240  kubectl delete service/mysql
-  241  clear
-  242  ls
-  243  clear
-  244  ls *.yaml
-  245  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  246  kubectl get all
-  247  kubectl get svc
-  248  kubectl get svc --watch
-  249  clear
-  250  ls *.yaml
-  251  kubectl apply -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  252  kubectl get all
-  253  docker push in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
-  254  kubectl get all
-  255  kubectl delete pod/todo-web-application-b65cc44d9-jfmbj
-  256  kubectl get all
-  257  kubectl logs todo-web-application-b65cc44d9-7h9pr -f
-  258  kubectl get svc
-  259  kubectl apply -f mysql-service.yaml
-  260  clear
-  261  kubectl get all
-  262  history| grep "kubectl delete"
-  263  kubectl delete -f mysql-service.yaml
-  264  kubectl delete -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml
-  265  kubectl delete -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  266  kubectl get all
-  267  kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-  268  kubectl get all
-  269  kubectl apply -f todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  270  kubectl get all
-  271  kubectl get all
-  272  kubectl get pv
-  273  kubectl get pvc
-  274  kubectl describe pod/mysql-5ccbbbdcd8-5zjqg 
-  275  clear
-  276  kubectl get pv
-  277  kubectl get pvc
-  278  clear
-  279  kubectl get pv
-  280  kubectl get pvc
-  281  clear
-  282  kubectl create configmap todo-web-application-config --from-literal=RDS_DB_NAME=todos
-  283  kubectl get configmap todo-web-application-config
-  284  kubectl describe configmap/todo-web-application-config
-  285  kubectl apply -f todo-web-application-deployment.yaml 
-  286  kubectl get pods
-  287  kubectl edit configmap/todo-web-application-config
-  288  kubectl scale deployment todo-web-application --replicas=0
-  289  kubectl scale deployment todo-web-application --replicas=1
-  290  kubectl get pods
-  291  kubectl logs todo-web-application-59f6776c94-9j77f -f
-  292  kubectl edit configmap/todo-web-application-config
-  293  kubectl apply -f todo-web-application-deployment.yaml 
-  294  kubectl get pods
-  295  kubectl logs todo-web-application-644d56758c-9sd7w -f
-  296  kubectl edit configmap todo-web-application-config
-  297  kubectl scale deployment todo-web-application --replicas=0
-  298  kubectl scale deployment todo-web-application --replicas=1
-  299  kubectl get pods
-  300  kubectl logs todo-web-application-644d56758c-qpfws -f
-  301  clear
-  302  kubectl create secret generic todo-web-application-secrets --from-literal=RDS_PASSWORD=dummytodos
-  303  kubectl get secret/todo-web-application-secrets
-  304  kubectl describe secret/todo-web-application-secrets
-  305  kubectl apply -f todo-web-application-deployment.yaml 
-  306  kubectl get pods
-  307  kubectl logs todo-web-application-5cc485458b-sqbtt -f
-  308  clear
-  309  kubectl delete service mysql
-  310  kubectl apply -f mysql-service.yaml 
-  311  kubectl get services
-  312  kubectl get all
-  313  kubectl edit configmap todo-web-application-config
-  314  clear
-  315  ls
-  316  clear
-  317  ls *.yaml
-  318  kubectl delete -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
-  319  history
-  320  exit
-  321  watch -n 0.1 curl http://34.96.78.210/currency-exchange/from/USD/to/INR
-  322  cd /in28Minutes/git/kubernetes-crash-course/05-currency-conversion-microservice-basic 
-  323  mvn clean install
-  324  clear
-  325  pwd
-  326  mvn clean insta
-  327  mvn clean install
-  328  clear
-  329  pwd
-  330  mvn clean install
-  331  docker push in28min/currency-conversion:0.0.1-RELEASE
-  332  kubectl apply -f deployment.yaml 
-  333  kubectl get all
-  334  kubectl logs pod/currency-conversion-65cdf4df86-qcb6f -f
-  335  mvn clean install
-  336  docker push in28min/currency-conversion:0.0.2-RELEASE
-  337  kubectl apply -f deployment.yaml 
-  338  kubectl get pods
-  339  kubectl get pods
-  340  kubectl logs currency-conversion-699869557d-2jzts -f
-  341  kubectl get pods
-  342  kubectl get all -o wide
-  343  kubectl get rs -o wide
-  344  clear
-  345  kubectl get svc
-  346  pwd
-  347  ls
-  348  kubectl apply -f ingress.yaml
-  349  kubectl get ingress
-  350  kubectl describe gateway-ingress
-  351  kubectl describe gateway gateway-ingress
-  352  kubectl describe ingress gateway-ingress
-  353  kubectl  ingress
-  354  kubectl describe ingress gateway-ingress
-  355  clear
-  356  ls
-  357  kubectl apply -f rbac.yml
-  358  kubectl delete -f rbac.yml
-  359  kubectl delete -f ingress.yaml 
-  360  kubectl get services
-  361  clear
-  362  kubectl get services
-  363  kubectl apply -f ingress.yaml 
-  364  kubectl get services
-  365  kubectl get ingress
-  366  kubectl apply -f deployment.yaml 
-  367  kubectl apply -f deployment.yaml,gateway.yaml
-  368  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-  369  ls
-  370  kubectl apply -f deployment.yaml,ingress.yaml
-  371  kubectl get ingress
-  372  kubectl get pods
-  373  clear
-  374  kubectl get services
-  375  pwd
-  376  cd ../06-currency-conversion-microservice-cloud/
-  377  mvn clean install
-  378  mvn clean install
-  379  docker push in28min/currency-conversion:0.0.5-RELEASE
-  380  clear
-  381  pwd
-  382  kubectl apply -f deployment.yaml
-  383  kubectl get pods
-  384  kubectl get serviceaccount
-  385  kubectl get serviceaccount
-  386  kubectl apply -f 02-rbac.yml 
-  387  clear
-  388  kubectl create configmap currency-conversion --from-literal=YOUR_PROPERTY=value --from-literal=YOUR_PROPERTY_2=value2
-  389  kubectl describe configmap/currency-conversion
-  390  kubectl get pods
-  391  kubectl logs currency-conversion-6ccdd9766b-8whhv -f
-  392  clear
-  393  kubectl scale deployment currency-conversion --replicas=0
-  394  kubectl scale deployment currency-conversion --replicas=1
-  395  kubectl get pods
-  396  kubectl logs currency-conversion-6ccdd9766b-d5c72 -f 
-  397  clear
-  398  cd /in28Minutes/git/kubernetes-crash-course/04-currency-exchange-microservice-basic 
-  399  mvn clean install
-  400  clear
-  401  pwd
-  402  mvn clean install
-  403  clear
-  404  pwd
-  405  mvn clean install
-  406  miner f39fc9d0cf82
-  407  [INFO]  ---> 1ec056fbf00c
-  408  [INFO] Successfully built 1ec056fbf00c
-  409  [INFO] Successfully tagged in28min/currency-exchange:0.0.1-RELEASE
-  410  [INFO] 
-  411  [INFO] Detected build of image with id 1ec056fbf00c
-  412  [INFO] Building jar: /in28Minutes/git/kubernetes-crash-course/04-currency-exchange-microservice-basic/target/currency-exchange-docker-info.jar
-  413  [INFO] Successfully built in28min/currency-exchange:0.0.1-RELEASE
-  414  [INFO] 
-  415  [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ 04-currency-exchange-basic ---
-  416  docker push in28min/currency-exchange:0.0.1-RELEASE
-  417  kubectl apply -f deployment.yaml
-  418  kubectl get all
-  419  kubectl get all
-  420  kubectl get all
-  421  kubectl logs pod/currency-exchange-578ddd7b8d-b8pjl 
-  422  kubectl logs pod/currency-exchange-578ddd7b8d-b8pjl -f
-  423  kubectl get all
-  424  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  425  clear
-  426  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR|json
-  427  clear
-  428  curl 34.67.103.178:8000/currency-exchange/from/USD/to/IN
-  429  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  430  clear
-  431  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  432  curl 34.67.103.178:8000/currency-exchange/from/USD/to/INR
-  433  clear
-  434  kubectl get pods
-  435  kubectl logs currency-exchange-578ddd7b8d-b8pjl -f
-  436  kubectl get all
-  437  kubectl get svc
-  438  kubectl apply -f deployment.yaml 
-  439  kubectl get services
-  440  gcloud container clusters get-credentials in28minutes-cluster --zone us-central1-a --project solid-course-258105
-  441  kubectl apply -f deployment.yaml 
-  442  kubectl get all
-  443  clear
-  444  kubectl get pods
-  445  kubectl apply -f deployment.yaml 
-  446  kubectl get pods
-  447  kubectl get pods
-  448  kubectl get pods
-  449  clear
-  450  kubectl get pods
-  451  clear
-  452  kubectl get pods
-  453  kubectl get pods
-  454  kubectl get pods
-  455  kubectl get pods
-  456  clear
-  457  kubectl get pods
-  458  kubectl get pods
-  459  kubectl get pods
-  460  clear
-  461  kubectl get pods
-  462  kubectl get pods
-  463  kubectl get pods
-  464  kubectl get pods
-  465  kubectl logs currency-exchange-57cd8f789b-lfhh6 -f
-  466  kubectl apply -f deployment.yaml 
-  467  kubectl get pods
-  468  kubectl logs currency-exchange-dfbbd955b-x9kzc -f
-  469  kubectl get pods
-  470  kubectl get pods
-  471  kubectl get pods
-  472  kubectl get pods
-  473  kubectl get pods
-  474  kubectl get pods
-  475  kubectl top pods
-  476  kubectl top pods
-  477  kubectl top pods
-  478  kubectl top pods
-  479  kubectl top pods
-  480  kubectl top pods
-  481  kubectl top pods
-  482  kubectl top pods
-  483  kubectl top pods
-  484  kubectl top pods
-  485  clear
-  486  kubectl autoscale deployment currency-exchange --min=1 --max=3 --cpu-percent=10 
-  487  kubectl get pods
-  488  kubectl get pods
-  489  kubectl get events
-  490  kubectl get hpa
-  491  kubectl get hpa -o yaml
-  492  kubectl get hpa -o yaml > 01-hpa.yaml
-  493  kubectl get hpa currency-exchange -o yaml > 01-hpa.yaml
-  494  clear
-  495  history
-  496  kubectl get cm
-  497  kubectl get cm currency-conversion > 00-configmap-currency-conversion.yaml
-  498  kubectl get cm currency-conversion -o yaml> 00-configmap-currency-conversion.yaml
-  499  exit
-  500  cd /in28Minutes/git/kubernetes-crash-course/11-istio-scripts-and-configuration 
-  501  take-step-backup.sh backup
-  502  gcloud container clusters get-credentials in28minutes-cluster-istio --zone us-central1-a --project solid-course-258105
-  503  pwd
-  504  ls
-  505  kubectl apply -f 01-helloworld-deployment.yaml 
-  506  kubectl get pods
-  507  kubectl get all -o wide
-  508  kubectl describe pod hello-world-rest-api-6845c5bbcd-bhjv2
-  509  kubectl label namespace default istio-injection=enabled
-  510  kubectl apply -f 01-helloworld-deployment.yaml 
-  511  kubectl get pods
-  512  kubectl get pods
-  513  kubectl get pods
-  514  kubectl get pods
-  515  kubectl get pods
-  516  kubectl get all
-  517  kubectl apply -f 01-helloworld-deployment.yaml
-  518  kubectl get all
-  519  kubectl delete -f 01-helloworld-deployment.yaml
-  520  kubectl apply -f 01-helloworld-deployment.yaml
-  521  kubectl get all
-  522  kubectl get pods --watch
-  523  kubectl apply -f 01-helloworld-deployment.yaml
-  524  kubectl get pods --watch
-  525  pwd
-  526  cd ../09-currency-exchange-microservice-istio/11-istio-scripts-and-configuration/
-  527  kubectl apply -f 01-helloworld-deployment.yaml
-  528  kubectl get pods
-  529  kubectl get pods
-  530  kubectl get svc
-  531  kubectl logs hello-world-rest-api-58d8f57cb7-wpx8w -f
-  532  kubectl logs hello-world-rest-api-58d8f57cb7-wpx8w hello-world-rest-api -f
-  533  kubectl get pods
-  534  kubectl describe pod hello-world-rest-api-58d8f57cb7-wpx8w
-  535  kubectl get pods
-  536  kubectl delete pod hello-world-rest-api-6845c5bbcd-g9w6g
-  537  kubectl get pods
-  538  kubectl logs hello-world-rest-api-58d8f57cb7-wpx8w hello-world-rest-api -f
-  539  kubectl get svcs --namespace istio-system
-  540  kubectl get svc --namespace istio-system
-  541  pwd
-  542  kubectl apply -f 02-creating-http-gateway.yaml 
-  543  kubectl apply -f 03-creating-virtualservice-external.yaml 
-  544  clear
-  545  kubectl get svc --namespace istio-system
-  546  kubectl get svc istio-ingressgateway --namespace istio-system
-  547  kubectl get pods
-  548  kubectl apply -f 01-helloworld-deployment.yaml 
-  549  kubectl apply -f 01-helloworld-deployment.yaml 
-  550  kubectl get pods
-  551  kubectl get pods
-  552  kubectl apply -f 01-helloworld-deployment.yaml 
-  553  kubectl get pods
-  554  kubectl get svcs --namespace=istio-system
-  555  kubectl get svc --namespace istio-system
-  556  kubectl get pods
-  557  kubectl apply -f 01-helloworld-deployment.yaml 
-  558  kubectl get pods
-  559  kubectl get pods
-  560  kubectl get pods
-  561  kubectl scale deployment hello-world-rest-api --replicas=4
-  562  kubectl get pods
-  563  kubectl scale deployment hello-world-rest-api --replicas=2
-  564  kubectl get pods
-  565  kubectl delete all -l app=hello-world-rest-api
-  566  kubectl apply -f 04-helloworld-multiple-deployments.yaml 
-  567  kubectl get pods
-  568  kubectl apply -f 04-helloworld-multiple-deployments.yaml 
-  569  clear
-  570  kubectl get pods
-  571  kubectl get pods
-  572  clear
-  573  kubectl get pods
-  574  kubectl apply -f 05-helloworld-mirroring.yaml 
-  575  kubectl get pods
-  576  kubectl logs hello-world-rest-api-v2-54cd78cfb6-gzz9n -f
-  577  kubectl logs hello-world-rest-api-v2-54cd78cfb6-gzz9n hello-world-rest-api -f
-  578  kubectl apply -f 06-helloworld-canary.yaml 
-  579  kubectl apply -f 06-helloworld-canary.yaml 
-  580  kubectl apply -f 06-helloworld-canary.yaml 
-  581  kubectl apply -f 06-helloworld-canary.yaml
-  watch -n 0.1 curl 35.223.25.220/hello-world
-
-  gcloud container clusters get-credentials standard-cluster-1 --zone=europe-west1-b
-
-kubectl create namespace istio-system
-curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.2.2 sh -
-cd istio-1.2.2
-for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-helm template install/kubernetes/helm/istio --name istio --set global.mtls.enabled=false --set tracing.enabled=true --set kiali.enabled=true --set grafana.enabled=true --namespace istio-system > istio.yaml
-kubectl apply -f istio.yaml
-kubectl label namespace default istio-injection=enabled
-
-
-mvn clean install
-  502  docker push in28min/currency-exchange:3.0.0-RELEASE
-  503  pwd
-  504  clear
-  505  kubectl apply -f deployment.yaml 
-  506  pwd
-  507  kubectl apply -f 11-istio-scripts-and-configuration/07-hw-virtualservice-all-services.yaml 
-  508  kubectl get secret -n istio-system kiali
-  509  kubectl create secret generic kiali -n istio-system --from-literal=username=admin --from-literal=passphrase=admin
-
-  kubectl get svc --namespace istio-system
-
-583  gcloud container clusters get-credentials helm-cluster --zone us-central1-a --project solid-course-258105
-  584  pwd
-  585  ls
-  586  ls
-  587  ./helm-tiller.sh
-  588  cat helm-tiller.sh 
-  589  kubectl get deploy,svc tiller-deploy -n kube-system
-  590  ls
-  591  clear
-  592  ls
-  593  helm install ./currency-exchange/ --name=currency-services
-  594  kubectl get all
-  595  kubectl get svc --watch
-  596  clear
-  597  helm install ./currency-conversion/ --name=currency-services-1
-  598  kubectl get pods
-  599  kubectl get svc --watch
-  600  clear
-  601  helm install ./currency-conversion/ --name=currency-services-1 --debug --dry-run
-  602  helm install ./currency-conversion/ --name=currency-services-3 --debug --dry-run
-  603  helm history currency-services-1
-  604  clear
-  605  helm upgrade currency-services-2 ./currency-conversion/
-  606  clear
-  607  helm upgrade currency-services-1 ./currency-conversion/
-  608  kubectl get pods
-  609  helm history currency-services-1
-  610  helm rollback currency-services-1 1
-  611  kubectl get pods
-  612  helm upgrade currency-services-1 ./currency-conversion/ --debug --dry-run
-  613  helm upgrade currency-services-1 ./currency-conversion/
-  614  helm history currency-services-1
-  615  helm rollback currency-services-1 1
-  616  kubectl get cm
-  617  history
-```
 
 ## Next Steps
 

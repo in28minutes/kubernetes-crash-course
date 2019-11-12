@@ -5,11 +5,6 @@ Chart, Repository and Release
 ```
 brew install kubernetes-helm
 helm init --history-max 200
-helm repo list
-helm search
-helm search mysql
-helm inspect stable/mysql
-helm inspect values stable/mysql
 helm create currency-exchange
 git clone https://github.com/awstutorials/docker-crash-course.git
 kubectl delete all -l app=currency-exchange
@@ -27,6 +22,12 @@ kubectl delete clusterrolebinding fabric8-rbac
 kubectl delete ingress gateway-ingress-1
 
 helm install ./currency-services/ --name=currency-services
+
+helm repo list
+helm search
+helm search mysql
+helm inspect stable/mysql
+helm inspect values stable/mysql
 
 
 ```
