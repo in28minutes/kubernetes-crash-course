@@ -110,7 +110,7 @@ You will be using containerizing (using Docker) and deploying a variety of proje
 - You will integrate Spring Boot Microservices on Kubernetes with Istio
 - You will perform Blue Green Deployments and Canary Deployments with Istio
 - You will integrate Kiali, Graphana and Prometheus with Istio and Kubernetes
-- You will implement Distribute Tracing for Spring Boot Microsevices with Istio and Jaegar
+- You will implement Distributed Tracing for Spring Boot Microsevices with Istio and Jaegar
 - You will use Helm to Automate Microservices Deployment on Kubernetes
 - You will Join 300,000 Learners having AMAZING LEARNING Experiences with in28Minutes
 
@@ -951,13 +951,31 @@ HostOS -- CloudInfrastructure [style=invis]
 ## Next Steps
 
 ## Todo
-- Course Promotion Emails/Posts
-  - 2 Emails on Udemy
-  - 2 Emails to Email List
-- Create YouTube Course Preview Video
-  - Add YouTube Course Preview Video as End Video for all videos
-  - Make it the YouTube Default Video
-- Release atleast 20 small videos - one a day on Youtube
-- Do atleast 3 Youtube live sessions
-- After a Month
-  - UFB and Packt
+---
+- Go Declarative - Go YAML
+- Use Helm
+- Stay Cloud Neutral
+> Kubernetes Best Pracises
+---
+- Naming Server
+- Load Balancing
+- Distributed Tracing 
+
+> Spring Cloud - A Couple Of Years Ago
+---
+- spring-cloud-starter-kubernetes
+- spring-cloud-gcp-starter-trace
+- spring-cloud-gcp-starter-logging
+
+> Spring Cloud - In the Cloud World
+---
+Update the step referring to Docker to refer to Appendix Section on Docker.
+---
+Google Console Keyboard Shortcuts
+---
+Debugging Problems in K8s
+---
+Billing
+---
+NodePort Example
+---
