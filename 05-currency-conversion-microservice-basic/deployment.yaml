@@ -49,4 +49,4 @@ spec:
   selector:
     app: currency-conversion
   sessionAffinity: None #CHANGE
-  type: NodePort
+  type: LoadBalancer
