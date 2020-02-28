@@ -527,6 +527,52 @@ helm upgrade currency-services-1 ./currency-conversion/
 helm history currency-services-1
 
 ```
+
+## AWS
+
+```
+eksctl create cluster --name in28minutes-cluster --nodegroup-name in28minutes-cluster-node-group  --node-type t2.medium --nodes 3 --nodes-min 3 --nodes-max 7 --managed --asg-access
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+kubectl create deployment todowebapp-h2 --image=in28min/todo-web-application-h2:0.0.1-SNAPSHOT
+kubectl expose deployment todowebapp-h2 --type=LoadBalancer --port=8080
+cd 03-todo-web-application-mysql/backup/02-final-backup-at-end-of-course 
+kubectl apply -f mysql-database-data-volume-persistentvolumeclaim-aws.yaml,mysql-deployment.yaml,mysql-service.yaml
+kubectl apply -f config-map.yaml,secret.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
+echo -n dummytodos | base64
+kubectl delete all -l app=hello-world-rest-api
+kubectl delete all -l app=todowebapp-h2
+kubectl delete all -l io.kompose.service=todo-web-application
+kubectl delete all -l io.kompose.service=mysql
+cd ../../..
+kubectl apply -f 04-currency-exchange-microservice-basic/deployment.yaml 
+kubectl apply -f 05-currency-conversion-microservice-basic/deployment.yaml
+eksctl utils associate-iam-oidc-provider     --region us-east-1     --cluster in28minutes-cluster     --approve
+aws iam create-policy     --policy-name ALBIngressControllerIAMPolicy     --policy-document https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/iam-policy.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/rbac-role.yaml
+eksctl create iamserviceaccount     --region us-east-1     --name alb-ingress-controller     --namespace kube-system     --cluster in28minutes-cluster     --attach-policy-arn arn:aws:iam::825148403966:policy/ALBIngressControllerIAMPolicy     --override-existing-serviceaccounts     --approve
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/alb-ingress-controller.yaml
+kubectl edit deployment.apps/alb-ingress-controller -n kube-system
+kubectl get pods -n kube-system
+kubectl apply -f 05-currency-conversion-microservice-basic/ingress_aws.yaml
+curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/latest/k8s-deployment-manifest-templates/deployment-mode/daemonset/container-insights-monitoring/quickstart/cwagent-fluentd-quickstart.yaml | sed "s/{{cluster_name}}/in28minutes-cluster/;s/{{region_name}}/us-east-1/" | kubectl apply -f -
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+kubectl -n kube-system edit deployment.apps/cluster-autoscaler
+kubectl version
+kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-autoscaler=k8s.gcr.io/cluster-autoscaler:v1.14.7
+kubectl create deployment autoscaler-demo --image=nginx
+kubectl scale deployment autoscaler-demo --replicas=50
+kubectl -n kube-system logs -f deployment.apps/cluster-autoscaler
+kubectl scale deployment autoscaler-demo --replicas=0
+kubectl get svc --all-namespaces
+kubectl delete service currency-conversion
+kubectl delete service currency-exchange
+kubectl delete ingress gateway-ingress
+eksctl delete cluster --name in28minutes-cluster
+
+```
+
 ## Notes
 
 - Assume replicas = 200 maxUnavailable = 20% maxSurge = 20%. Max pods that can be unavailable during release = 20%(maxUnavailable) * 200 = 40. Max pods used during release = 200 + 20%(maxSurge) * 200 = 240
