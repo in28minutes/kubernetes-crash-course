@@ -20,9 +20,9 @@ Prerequisites
 Help for eksctl https://eksctl.io/
 
 ```
-eksctl create cluster --name in28minutes-cluster-aws \ 
---nodegroup-name in28minutes-cluster-node-group \ 
---node-type t2.medium --nodes 3 --nodes-min 3 --nodes-max 7 \ 
+eksctl create cluster --name in28minutes-cluster-aws / 
+--nodegroup-name in28minutes-cluster-node-group / 
+--node-type t2.medium --nodes 3 --nodes-min 3 --nodes-max 7 / 
 --managed --asg-access
 ```
 
