@@ -96,6 +96,8 @@ kubectl scale deployment autoscaler-demo --replicas=50
 
 ### Clean up the Cluster
 
+https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html
+
 Delete all LoadBalancer services
 
 ```
