@@ -9,9 +9,10 @@ for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f 
 helm template install/kubernetes/helm/istio --name istio --set global.mtls.enabled=false --set tracing.enabled=true --set kiali.enabled=true --set grafana.enabled=true --namespace istio-system > istio.yaml
 kubectl apply -f istio.yaml
 
-
 kubectl label namespace default istio-injection=enabled
 ```
+
+Windows - https://curl.haxx.se/windows/
 
 # Using Kiali
 

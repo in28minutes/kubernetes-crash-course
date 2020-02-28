@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  RDS_DB_NAME: todos
+  RDS_HOSTNAME: mysql
+  RDS_PORT: "3306"
+  RDS_USERNAME: todos-user
+kind: ConfigMap
+metadata:
+  name: todo-web-application-config
+  namespace: default
