@@ -65,7 +65,6 @@ echo -n dummytodos | base64
 ```
 kubectl delete all -l app=hello-world-rest-api
 kubectl delete all -l app=todowebapp-h2
-kubectl delete all -l app=todo-web-application
 kubectl delete all -l io.kompose.service=todo-web-application
 kubectl delete all -l io.kompose.service=mysql
 ```
