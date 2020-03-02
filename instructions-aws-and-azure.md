@@ -128,7 +128,7 @@ az group create --name kubernetes-resource-group --location westeurope
 
 az ad sp create-for-rbac --skip-assignment --name kubernetes-cluster-service-principal
 
-az aks create --name in28minutes-cluster --node-count 4 --enable-addons monitoring --resource-group kubernetes-resource-group --vm-set-type VirtualMachineScaleSets --load-balancer-sku standard --enable-cluster-autoscaler  --min-count 1 --max-count 7 --service-principal <<appId>> --client-secret  <<password>>
+az aks create --name in28minutes-cluster --node-count 4 --enable-addons monitoring --resource-group kubernetes-resource-group --vm-set-type VirtualMachineScaleSets --load-balancer-sku standard --enable-cluster-autoscaler  --min-count 1 --max-count 7  --generate-ssh-keys --service-principal <<appId>> --client-secret  <<password>>
 
 az aks get-credentials --resource-group kubernetes-resource-group --name in28minutes-cluster
 ```
