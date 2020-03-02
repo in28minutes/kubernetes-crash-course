@@ -20,15 +20,21 @@ Prerequisites
 Help for eksctl https://eksctl.io/
 
 ```
-eksctl create cluster --name in28minutes-cluster-aws --nodegroup-name in28minutes-cluster-node-group --node-type t2.medium --nodes 3 --nodes-min 3 --nodes-max 7 --managed --asg-access
+eksctl create cluster --name in28minutes-cluster --nodegroup-name in28minutes-cluster-node-group  --node-type t2.medium --nodes 3 --nodes-min 3 --nodes-max 7 --managed --asg-access
 ```
 
 If you get this error
 ```
-AWS::EKS::Cluster/ControlPlane: CREATE_FAILED – "Cannot create cluster 'in28minutes-dev-cluster' because us-east-1e, the targeted availability zone, does not currently have sufficient capacity to support the cluster. Retry and choose from these availability zones: us-east-1a, us-east-1b, us-east-1c, us-east-1d, us-east-1f (Service: AmazonEKS; Status Code: 400; Error Code: UnsupportedAvailabilityZoneException; Request ID: a5580928-689d-4558-b3bd-2573131ec69e)
+AWS::EKS::Cluster/ControlPlane: CREATE_FAILED – "Cannot create cluster 
+'in28minutes-dev-cluster' because us-east-1e, the targeted availability zone, does not 
+currently have sufficient capacity to support the cluster. Retry and choose from these 
+availability zones: us-east-1a, us-east-1b, us-east-1c, us-east-1d, us-east-1f (Service: 
+	AmazonEKS; Status Code: 400; Error Code: UnsupportedAvailabilityZoneException; Request 
+	ID: a5580928-689d-4558-b3bd-2573131ec69e)
 ```
 
 Add Availability Zones
+
 ```
 --zones=us-east-1a,us-east-1b
 ```
@@ -48,6 +54,7 @@ kubectl expose deployment todowebapp-h2 --type=LoadBalancer --port=8080
 cd /Ranga/git/01.udemy-course-repos/kubernetes-crash-course/03-todo-web-application-mysql/backup/02-final-backup-at-end-of-course 
 
 kubectl apply -f mysql-database-data-volume-persistentvolumeclaim-aws.yaml,mysql-deployment.yaml,mysql-service.yaml
+
 kubectl apply -f config-map.yaml,secret.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
 
 echo -n dummytodos | base64
@@ -58,7 +65,6 @@ echo -n dummytodos | base64
 ```
 kubectl delete all -l app=hello-world-rest-api
 kubectl delete all -l app=todowebapp-h2
-kubectl delete all -l app=todo-web-application
 kubectl delete all -l io.kompose.service=todo-web-application
 kubectl delete all -l io.kompose.service=mysql
 ```
@@ -99,7 +105,6 @@ kubectl scale deployment autoscaler-demo --replicas=50
 https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html
 
 Delete all LoadBalancer services
-
 ```
 kubectl get svc --all-namespaces
 kubectl delete svc service-name
@@ -107,5 +112,5 @@ kubectl delete svc service-name
 
 Delete the cluster
 ```
-eksctl delete cluster --name in28minutes-cluster-aws
+eksctl delete cluster --name in28minutes-cluster
 ```
