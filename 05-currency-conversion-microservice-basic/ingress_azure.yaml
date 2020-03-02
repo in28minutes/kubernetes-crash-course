@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: gateway-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - http:
@@ -11,7 +11,7 @@ spec:
       - path: /currency-exchange(/|$)(.*)
         backend:
           serviceName: currency-exchange
-          servicePort: 8000          
+          servicePort: 8000
       - path: /currency-conversion(/|$)(.*)
         backend:
           serviceName: currency-conversion
