@@ -573,6 +573,46 @@ eksctl delete cluster --name in28minutes-cluster
 
 ```
 
+## Azure
+
+```
+az group create --name kubernetes-resource-group --location westeurope
+az ad sp create-for-rbac --skip-assignment --name kubernetes-cluster-service-principal
+az aks create --name in28minutes-cluster --node-count 4 --enable-addons monitoring --resource-group kubernetes-resource-group --vm-set-type VirtualMachineScaleSets --load-balancer-sku standard --enable-cluster-autoscaler  --min-count 1 --max-count 7 --generate-ssh-keys --service-principal HIDDEN --client-secret  HIDDEN
+az aks get-credentials --resource-group kubernetes-resource-group --name in28minutes-cluster
+kubectl version
+kubectl get nodes
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+kubectl create deployment todowebapp-h2 --image=in28min/todo-web-application-h2:0.0.1-SNAPSHOT
+kubectl expose deployment todowebapp-h2 --type=LoadBalancer --port=8080
+git clone https://github.com/in28minutes/kubernetes-crash-course.git
+cd 03-todo-web-application-mysql/backup/02-final-backup-at-end-of-course
+kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
+kubectl apply -f config-map.yaml,secret.yaml,todo-web-application-deployment.yaml,todo-web-application-service.yaml
+kubectl delete all -l app=hello-world-rest-api
+kubectl delete all -l app=todowebapp-h2
+kubectl delete all -l io.kompose.service=todo-web-application
+kubectl delete all -l io.kompose.service=mysql
+
+cd ../../..
+kubectl apply -f 04-currency-exchange-microservice-basic/deployment.yaml
+kubectl apply -f 05-currency-conversion-microservice-basic/deployment.yaml
+
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm install stable/nginx-ingress --namespace default --set controller.replicaCount=1 --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux --generate-name
+
+kubectl apply -f 05-currency-conversion-microservice-basic/ingress_azure.yaml
+
+kubectl get svc
+kubectl delete svc currency-conversion
+kubectl delete svc currency-exchange
+kubectl delete svc nginx-ingress-1583140351-controller
+
+az aks delete --name in28minutes-cluster --resource-group kubernetes-resource-group
+
+```
+
 ## Notes
 
 - Assume replicas = 200 maxUnavailable = 20% maxSurge = 20%. Max pods that can be unavailable during release = 20%(maxUnavailable) * 200 = 40. Max pods used during release = 200 + 20%(maxSurge) * 200 = 240
