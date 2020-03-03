@@ -250,6 +250,43 @@ You will be using containerizing (using Docker) and deploying a variety of proje
 - 11 Step 08 - Playing with Docker Containers
 - 11 Step 09 - Playing with Docker Commands - stats, system
 
+### Kubernetes on AWS with EKS
+- 12 Step 01 - Kubernetes on AWS with EKS - Section Introduction
+- 12 Step 02 - Creating an AWS Root Account
+- 12 Step 03 - Creating an IAM User for your AWS Account
+- 12 Step 04 - Its Your Responsibility to Monitor Billing on the Cloud - 5 Recommendations
+- 12 Step 05 - Monitor AWS Billing - Setting Billing Alerts
+- 12 Step 06 - Installing AWS CLI
+- 12 Step 07 - Install EKS CTL and Configure AWS CLI with IAM User
+- 12 Step 08 - Create a Kubernetes Cluster on AWS with EKS
+- 12 Step 09 - Quick Review of AWS Basics - Region, AZ, VPC and Subnet
+- 12 Step 10 - Quick Review of the AWS EKS Kubernetes Cluster
+- 12 Step 11 - Review Hello World and Web Apps from GKE Section
+- 12 Step 12 - Deploy Hello World Rest Api to AWS EKS Kubernetes Cluster
+- 12 Step 13 - Deploy Web App H2 to AWS EKS Kubernetes Cluster
+- 12 Step 14 - Deploy Web App with MySQL to AWS EKS Kubernetes Cluster
+- 12 Step 15 - Delete Web App and Hello World Deployments
+- 12 Step 16 - Review of Microservices on GKE
+- 12 Step 17 - Deploy Microservices to AWS EKS Kubernetes Cluster
+- 12 Step 18 - Setup Ingress Controller and Ingress
+- 12 Step 19 - Quick Review of Ingress
+- 12 Step 20 - Setup Container Insights and AWS Cloud Watch Logs
+- 12 Step 21 - Setup Cluster Autoscaling on AWS EKS Kubernetes Cluster
+- 12 Step 22 - Delete AWS EKS Kubernetes Cluster
+
+### Kubernetes on Azure with AKS
+- 13 Step 01 - Kubernetes on Azure with AKS - Section Introduction
+- 13 Step 02 - Creating an Azure Account
+- 13 Step 03 - Create a Resource Group, Service Principal and AKS Kubernetes Cluster
+- 13 Step 04 - Deploy Hello World Rest Api to Azure AKS Kubernetes Cluster
+- 13 Step 05 - Deploy Web App H2 to Azure AKS Kubernetes Cluster
+- 13 Step 06 - Deploy Web App with MySQL to Azure AKS Kubernetes Cluster
+- 13 Step 07 - Delete Deployments and Review of Microservices on GKE
+- 13 Step 08 - Deploy Microservices to Azure AKS Kubernetes Cluster
+- 13 Step 09 - Review Dev Spaces, Insights and Logs in Azure AKS Kubernetes Cluster
+- 13 Step 10 - Setup Ingress Controller and Ingress
+- 13 Step 11 - Review Cluster Autoscaling on Azure AKS Kubernetes Cluster
+- 13 Step 12 - Delete Azure AKS Kubernetes Cluster
 
 ```sh
 for file in *; do mv "${file}" "${file//-/ }"; done
