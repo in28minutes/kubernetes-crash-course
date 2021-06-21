@@ -6,7 +6,7 @@ kubectl create namespace istio-system
 curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.2.2 sh -
 cd istio-1.2.2
 for i in install/kubernetes/helm/istio-init/files/crd*yaml; do kubectl apply -f $i; done
-helm template install/kubernetes/helm/istio --name istio --set global.mtls.enabled=false --set tracing.enabled=true --set kiali.enabled=true --set grafana.enabled=true --namespace istio-system > istio.yaml
+helm template istio install/kubernetes/helm/istio --set global.mtls.enabled=false --set tracing.enabled=true --set kiali.enabled=true --set grafana.enabled=true --namespace istio-system > istio.yaml
 kubectl apply -f istio.yaml
 
 kubectl label namespace default istio-injection=enabled
