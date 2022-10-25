@@ -11,5 +11,5 @@ jobs:
     name: Bump Package Version
     runs-on: ubuntu-latest
     steps:
-      - name: Example variable usage
+      - name: Example variable usag
         run: git tag ${{ github.event.inputs.version }}
