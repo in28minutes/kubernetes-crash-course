@@ -8,7 +8,7 @@ on:
         required: true
 jobs:
   bump-version:
-    name: Bump Package Version
+    name: Bump Package Versio
     runs-on: ubuntu-latest
     steps:
       - name: Example variable usag
