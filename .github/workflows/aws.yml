@@ -4,8 +4,9 @@ on:
     inputs:
       version:
         description: Environment
-        default: dev
+        default: dev-env
         required: true
+        
 jobs:
   bump-version:
     name: Bump Package Versio
