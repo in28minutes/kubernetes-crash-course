@@ -7,7 +7,7 @@ on:
         default: dev-env
         required: true
       BRANCH:
-        description: 'Branch to use'
+        description: 'Branch use'
         required: true
         default: 'dev'
         
