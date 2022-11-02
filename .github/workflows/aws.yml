@@ -6,6 +6,10 @@ on:
         description: Environment
         default: dev-env
         required: true
+      BRANCH:
+        description: 'Branch to use'
+        required: true
+        default: 'dev'
         
 jobs:
   bump-version:
