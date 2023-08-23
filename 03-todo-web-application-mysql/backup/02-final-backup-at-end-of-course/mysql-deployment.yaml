@@ -1,10 +1,13 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     io.kompose.service: mysql
   name: mysql
 spec:
+  selector:
+    matchLabels:
+      io.kompose.service: mysql
   replicas: 1
   strategy:
     type: Recreate
